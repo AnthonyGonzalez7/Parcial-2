@@ -4,7 +4,7 @@
             
             <?php
                 foreach(automoviles_controllers::Mostrar() as $autos){         
-                     $id = $autos->getid()                   
+                     $id = $autos->getid_producto()                   
                 ?>
             <Link href="#">
 
@@ -26,3 +26,5 @@
 <br>
 <br>
 <br>
+
+

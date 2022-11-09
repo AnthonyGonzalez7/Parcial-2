@@ -22,6 +22,7 @@
         <li class="nav-item dropdown position-end ">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><i class="bi bi-person-circle bg-black"></i></a>
           <ul class="dropdown-menu dropdown-menu dropdown-menu-lg-end">
+          <li><a class="dropdown-item" id="cerrar_sesionvar">asdasd</a></li>
             <li><a class="dropdown-item" href="<?php echo "index.php?c=".seg::codificar("login")."&m=".seg::codificar("cerrar_sesion") ?>" id="cerrar_sesionvar" value="1" name="cerrar_sesionvar">Cerrar Sesión</a></li>
           </ul>
         </li>

@@ -1,22 +1,25 @@
 <?php
 
-    class automoviles_models{
-        private $Titlecar, $Engine, $Transmissions, $BodyWork, $Traction, $Aceleration, $Context, $id, $Poster, $Poster2, $Poster3, $Poster4;
+    class productos_models{
+        private $Titlecar, $Engine, $Transmissions, $BodyWork, $Traction, $Aceleration, $descripcion, $id_producto, $Poster, $Poster2, $Poster3, $Poster4, $costo_compra, $precio_venta, $cantidad_en_existencia;
 
 
-        public function __construct($Titlecar, $Engine, $Transmissions, $BodyWork, $Traction, $Aceleration, $Context, $id, $Poster, $Poster2, $Poster3, $Poster4){
+        public function __construct($Titlecar, $Engine, $Transmissions, $BodyWork, $Traction, $Aceleration, $descripcion, $id_producto, $Poster, $Poster2, $Poster3, $Poster4, $costo_compra, $precio_venta, $cantidad_en_existencia){
             $this->Titlecar=$Titlecar;
             $this->Engine=$Engine;
             $this->Transmissions=$Transmissions;
             $this->BodyWork=$BodyWork;
             $this->Traction=$Traction;
             $this->Aceleration=$Aceleration;
-            $this->Context=$Context;
-            $this->id=$id;
+            $this->descripcion=$descripcion;
+            $this->id_producto=$id_producto;
             $this->Poster=$Poster;
             $this->Poster2=$Poster2;
             $this->Poster3=$Poster3;
             $this->Poster4=$Poster4;
+            $this->costo_compra=$costo_compra;
+            $this->precio_venta=$precio_venta;
+            $this->cantidad_en_existencia=$cantidad_en_existencia;
         }
 
         public function setTitlecar($Titlecar){
@@ -37,11 +40,11 @@
         public function setAceleration($Aceleration){
             $this->Aceleration=$Aceleration;
         }
-        public function setContext($Context){
-            $this->Context=$Context;
+        public function setdescripcion($descripcion){
+            $this->descripcion=$descripcion;
         }
-        public function setid($id){
-            $this->id=$id;
+        public function setid_producto($id_producto){
+            $this->id_producto=$id_producto;
         }
         public function setPoster($Poster){
             $this->Poster=$Poster;
@@ -54,6 +57,15 @@
         }
         public function setPoster4($Poster4){
             $this->Poster4=$Poster4;
+        }
+        public function setcosto_compra($costo_compra){
+            $this->costo_compra=$costo_compra;
+        }
+        public function setprecio_venta($precio_venta){
+            $this->precio_venta=$precio_venta;
+        }
+        public function setcantidad_en_existencia($cantidad_en_existencia){
+            $this->cantidad_en_existencia=$cantidad_en_existencia;
         }
 
         
@@ -75,11 +87,11 @@
         public function getAceleration(){
             return $this->Aceleration;
         }
-        public function getContext(){
-            return $this->Context;
+        public function getdescripcion(){
+            return $this->descripcion;
         }
-        public function getid(){
-            return $this->id;
+        public function getid_producto(){
+            return $this->id_producto;
         }
         public function getPoster(){
             return $this->Poster;
@@ -92,6 +104,15 @@
         }
         public function getPoster4(){
             return $this->Poster4;
+        }
+        public function getcosto_compra(){
+            return $this->costo_compra;
+        }
+        public function getprecio_venta(){
+            return $this->precio_venta;
+        }
+        public function getcantidad_en_existencia(){
+            return $this->cantidad_en_existencia;
         }
     }
 

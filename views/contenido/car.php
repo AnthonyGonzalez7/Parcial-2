@@ -1,6 +1,6 @@
 <br />
 <?php foreach(automoviles_controllers::Mostrar() as $autos){  
-    $id_comparacion = $autos->getid()?>
+    $id_comparacion = $autos->getid_producto()?>
     <?php if(seg::decodificar($id) == $id_comparacion){
     ?>
                 <h1 class="text-center"><?php echo $autos->getTitlecar()?></h1>
@@ -27,24 +27,36 @@
 
                 </div>
                 <div class="container ml-20 animate__animated animate__fadeInRight">
-                    <h4>Motor: <?php echo $autos->getEngine()?></h4>
-                    <br />
-                    <h4>Transmisión: <?php echo $autos->getTransmissions()?></h4>
-                    <br />
-                    <h4>Carroceria: <?php echo $autos->getBodyWork()?></h4>
-                    <br />
-                    <h4>Tracción: <?php echo $autos->getTraction()?></h4>
-                    <br />
-                    <h4>Aceleración: <?php echo $autos->getAceleration()?></h4>
-                    <br />
-                    <h4>Descripcion: </h4>
-                    <div class="text-justify ...">
-                    <h4><?php echo $autos->getContext()?></h4>
-                    </div>
-                    <br />
+                    <div class="row">
+                        <div class="col-sm-9">
+
+                        <h4>Motor: <?php echo $autos->getEngine()?></h4>
+                        <br />
+                        <h4>Transmisión: <?php echo $autos->getTransmissions()?></h4>
+                        <br />
+                        <h4>Carroceria: <?php echo $autos->getBodyWork()?></h4>
+                        <br />
+                        <h4>Tracción: <?php echo $autos->getTraction()?></h4>
+                        <br />
+                        <h4>Aceleración: <?php echo $autos->getAceleration()?></h4>
+                        <br />
+                        <h4>Descripcion: </h4>
+                        <div class="text-justify ...">
+                        <h4><?php echo $autos->getdescripcion()?></h4>
+                        </div>
+                        <br />
+
+                        </div>
+                        <div class="col-3">
+                            <a href="<?php echo "index.php?c=".seg::codificar("compra")."&m=".seg::codificar("compra")."&id=".seg::codificar($id_comparacion ) ?>"><button type="button" class="btn btn-outline-dark rounded position-fixed top-0 end-0 w-25" >Comprar <i class="bi bi-bag"></i></button></a>
+                            <br><br><br>
+                            <h3 class="display-5">Precio: $<?php echo $autos->getcosto_compra()?></h3>   
+                        </div>
+                    </div>  
                 </div>
+
                 </div>
                 
 <?php }}?>
 <br><br>
-<footer><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script></footer>              
+           

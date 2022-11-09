@@ -9,7 +9,7 @@
                     <p class="card-text" style="text-align: justify; margin: 50px;">Aenean id auctor arcu. Ut ut lectus a nulla finibus lobortis. Maecenas scelerisque mattis porta. Mauris fringilla, odio id commodo rhoncus, arcu ante commodo erat, id aliquet nunc diam et felis. Aliquam erat volutpat. Cras a convallis magna. Fusce rutrum et turpis at interdum. Cras interdum ultrices nisl, eu pulvinar justo venenatis ut. Quisque dignissim hendrerit congue. Mauris cursus mauris a mauris luctus ornare.</p>
                     <center><img src="resource\logonav.png" class="img-fluid" width="450" height="350" alt="..."></center>
                     <br>
-                    <center><p>correodelprogramador@gmail.com</p></center>
+                    <center><p>programador@automoviles.com</p></center>
                     <center><p >+507 0000-0000</p></center>
                     
                     <section class="mb-2 d-flex justify-content-center">
