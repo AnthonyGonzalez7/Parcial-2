@@ -3,26 +3,7 @@ foreach(automoviles_controllers::Mostrar() as $autos){
     $id_comparacion = $autos->getid_producto()?>
     <?php if(seg::decodificar($id) == $id_comparacion){
     ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Factura | <?php echo $autos->getTitlecar()?></title>
-    <link rel="stylesheet" href="resource/assets/css/main.css">
-</head>
-<body>
-<div class="control-bar">
-  <div class="container">
-    <div class="row">
-      <div class="col-2-4">
-        <div class="slogan">Facturación </div>    
-      </div>
-      <div class="col-4 text-right">
-        <a href="javascript:window.print()">Imprimir</a>
-      </div><!--.col-->
-    </div><!--.row-->
-  </div><!--.container-->
-</div><!--.control-bar-->
+
 
 
 
@@ -167,17 +148,4 @@ foreach(automoviles_controllers::Mostrar() as $autos){
 <div class="note">
   <h2>Nota:</h2>
 </div><!--.note-->
-
-<footer class="row">
-  <div class="col-1 text-center">
-    <p class="notaxrelated">El monto total incluye el impuesto sobre la venta.</p>
-    
-  </div>
-</footer>
 <?php }}?>
-<br><br>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="assets/bower_components/jquery/dist/jquery.min.js"><\/script>')</script>
-<script src="resource/assets/js/main.js"></script>
-</body>
-</html>

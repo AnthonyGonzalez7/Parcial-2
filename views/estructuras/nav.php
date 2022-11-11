@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid w-100">
-    <img class="navbar-brand" src="resource\logonav.png" width="150" height="45"/>
+    <a href="<?php echo "index.php?c=".seg::codificar("principal")."&m=".seg::codificar("principal") ?>">
+    <img class="navbar-brand"  src="resource\logonav.png" width="150" height="45"/>
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
