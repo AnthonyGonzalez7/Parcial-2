@@ -3,7 +3,6 @@
         <div class="row">
            
                 <div class="card border-light animate__animated animate__fadeInDown animate__delay-1s ">
-                  <img class="card-img-top" src="holder.js/100px180/" alt="">
                   <div class="card-body">
                     <center><h4 class="card-title">Contáctanos</h4></center>
                     <p class="card-text" style="text-align: justify; margin: 50px;">Aenean id auctor arcu. Ut ut lectus a nulla finibus lobortis. Maecenas scelerisque mattis porta. Mauris fringilla, odio id commodo rhoncus, arcu ante commodo erat, id aliquet nunc diam et felis. Aliquam erat volutpat. Cras a convallis magna. Fusce rutrum et turpis at interdum. Cras interdum ultrices nisl, eu pulvinar justo venenatis ut. Quisque dignissim hendrerit congue. Mauris cursus mauris a mauris luctus ornare.</p>

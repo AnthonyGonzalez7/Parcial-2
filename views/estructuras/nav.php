@@ -15,14 +15,18 @@
         <li class="nav-item">
           <a class="nav-link text-secondary" href="<?php echo "index.php?c=".seg::codificar("contacto")."&m=".seg::codificar("contacto") ?>">Contacto</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link text-secondary" href="<?php echo "index.php?c=".seg::codificar("busqueda")."&m=".seg::codificar("busqueda") ?>">Busqueda</a>
+        </li>
       </ul>
     </div>
     <div>
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item dropdown position-end ">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><i class="bi bi-person-circle bg-black"></i></a>
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><?php  echo seg::decodificar($_SESSION["nombre"]) ?><i class="bi bi-person-circle bg-black"></i></a>
           <ul class="dropdown-menu dropdown-menu dropdown-menu-lg-end">
-          <li><a class="dropdown-item" id="cerrar_sesionvar">asdasd</a></li>
+            <li><span class="dropdown-item-text disabled"><?php  echo seg::decodificar($_SESSION["correo"]) ?></span></li>
+            <hr>
             <li><a class="dropdown-item" href="<?php echo "index.php?c=".seg::codificar("login")."&m=".seg::codificar("cerrar_sesion") ?>" id="cerrar_sesionvar" value="1" name="cerrar_sesionvar">Cerrar Sesión</a></li>
           </ul>
         </li>

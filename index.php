@@ -6,6 +6,7 @@
     require_once("controllers/contacto_controllers.php");
     require_once("controllers/car_controllers.php");
     require_once("controllers/compra_controllers.php");
+    require_once("controllers/busqueda_controllers.php");
     require_once("utils/seg.php");
     if (count($_GET)==0)
         call_user_func("principal_controllers::principal");

@@ -50,7 +50,8 @@
                         <div class="col-3">
                             <a href="<?php echo "index.php?c=".seg::codificar("compra")."&m=".seg::codificar("compra")."&id=".seg::codificar($id_comparacion ) ?>"><button type="button" class="btn btn-outline-dark rounded position-fixed top-0 end-0 w-25" >Comprar <i class="bi bi-bag"></i></button></a>
                             <br><br><br>
-                            <h3 class="display-5">Precio: $<?php echo $autos->getcosto_compra()?></h3>   
+                            <h3 class="display-5">Precio: $<?php echo $autos->getcosto_compra()?></h3>
+                            <h5>Cantidad existente: <?php echo $autos->getcantidad_en_existencia()?></h5>      
                         </div>
                     </div>  
                 </div>

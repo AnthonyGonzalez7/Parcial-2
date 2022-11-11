@@ -1,4 +1,5 @@
-<?php foreach(automoviles_controllers::Mostrar() as $autos){  
+<?php 
+foreach(automoviles_controllers::Mostrar() as $autos){  
     $id_comparacion = $autos->getid_producto()?>
     <?php if(seg::decodificar($id) == $id_comparacion){
     ?>
@@ -66,9 +67,9 @@
 
   <div class="col-2 text-right details">
     <p>
-      Fecha: <input type="text" class="datePicker" /><br>
-      Factura #: <input type="text" value="100" /><br>
-      Vence: <input class="twoweeks" type="text"/>
+      Fecha: <input  class="datePicker" readonly><br>
+      Factura #: <input value="100" readonly><br>
+      Vence: <input class="twoweeks" readonly>
     </p>
   </div><!--.col-->
   
@@ -79,7 +80,8 @@
 
     <p class="client">
       <strong>Facturar a</strong><br>
-      [Nombre cliente]<br>
+      <?php  echo seg::decodificar($_SESSION["nombre"]) ?><br>
+      <?php  echo seg::decodificar($_SESSION["correo"]) ?><br>
 	  Panamá, Panamá<br>
 	  255-7878 
     </p>
@@ -91,7 +93,8 @@
 
     <p class="client">
       <strong>Enviar a</strong><br>
-      [Nombre cliente]<br>
+      <?php  echo seg::decodificar($_SESSION["nombre"]) ?><br>
+      <?php  echo seg::decodificar($_SESSION["correo"]) ?><br>
 	  Panamá, Panamá<br>
 	  255-7878 
     </p>
@@ -114,9 +117,9 @@
     </thead>
     <tbody>
 	<tr class="invoice_detail">
-      <td width="25%" style="text-align">John Doe</td>
+      <td width="25%" style="text-align">Programador</td>
        <td width="25%">#PO-2022 </td>
-      <td width="20%">DHL</td>
+      <td width="20%">Entrega a Domicilio</td>
       <td width="30%">Pago al contado</td>
 	 </tr>
 	</tbody>
@@ -138,11 +141,11 @@
     </thead>
     <tbody>
       <tr>
-        <td width='5%'><a class="control removeRow" href="#">x</a> <span>12345</span></td>
+        <td width='5%'><?php echo $autos->getid_producto()?></td>
         <td width='60%'><?php echo $autos->getTitlecar()?></td>
-        <td class="amount"><input type="text" value="1"/></td>
-        <td class="rate"><input type="text" value="<?php echo $autos->getcosto_compra()?>" /></td>
-        <td><?php echo $autos->getprecio_venta()?></td>
+        <td class="amount">1</td>
+        <td class="rate"><?php echo $autos->getcosto_compra()?></td>
+        <td>$<?php echo $autos->getprecio_venta()?></td>
       </tr>
     </tbody>
   </table>
@@ -156,7 +159,7 @@
     </tr>
     <tr>
       <td><strong>Total: </strong></td>
-      <td><h1><?php echo $autos->getprecio_venta()?></h1></td>
+      <td><h1>$<?php echo $autos->getprecio_venta()?></h1></td>
     </tr>
   </table>
 </div>
@@ -167,7 +170,7 @@
 
 <footer class="row">
   <div class="col-1 text-center">
-    <p class="notaxrelated">El monto de la factura no incluye el impuesto sobre las ventas.</p>
+    <p class="notaxrelated">El monto total incluye el impuesto sobre la venta.</p>
     
   </div>
 </footer>

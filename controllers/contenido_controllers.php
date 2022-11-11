@@ -1,5 +1,6 @@
 <?php
 require_once("controllers/automoviles_controllers.php");
+require_once("models/users_models.php");
     class contenido_controllers{
         public static function contenido(){
             
