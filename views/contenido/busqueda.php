@@ -10,7 +10,7 @@
                     </div>
                     <?php }?>
                     <form action="<?php echo "index.php?c=".seg::codificar("busqueda")."&m=".seg::codificar("busqueda_de_producto") ?>"  method="post">
-                        <div class="mb-3">
+                    <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Ingrese el automóvil a buscar</label>
                             <input type="text" class="form-control w-25" id="inlineFormInputGroupUsername" aria-describedby="emailHelp" placeholder="ID" name="txtBuscar">
                         </div>

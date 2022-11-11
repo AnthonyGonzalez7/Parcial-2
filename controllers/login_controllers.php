@@ -18,7 +18,15 @@ require_once("models/users_models.php");
 
         public static function validar() {
             if($_POST){
-               
+            $token= filter_var($_POST["token"],FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+            $_SESSION["token"] = $token;
+
+            if (!isset($token) || !seg::validaSesion($token)) {
+                echo "Acceso restringido";
+                exit();
+            }
+            $usuario= filter_var($_POST["txtCorreo_Usuario"], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+            $Contra= filter_var($_POST["txtContraseña_Usuario"], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
             $obj = new users_models($_POST["txtcorreo"],$_POST["txtpassword"],"","");
             $resultado = $obj->validacion_usuario();
             if(count($resultado)>0){

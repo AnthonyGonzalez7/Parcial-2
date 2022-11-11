@@ -15,12 +15,18 @@
         <li class="nav-item">
           <a class="nav-link text-secondary" href="<?php echo "index.php?c=".seg::codificar("contacto")."&m=".seg::codificar("contacto") ?>">Contacto</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-secondary" href="<?php echo "index.php?c=".seg::codificar("busqueda")."&m=".seg::codificar("busqueda") ?>">Busqueda</a>
-        </li>
+        <?php if(isset($_SESSION["correo"])) {?>
+          <li class="nav-item">
+            <a class="nav-link text-secondary" href="<?php echo "index.php?c=".seg::codificar("busqueda")."&m=".seg::codificar("busqueda") ?>">Busqueda</a>
+          </li>
+        <?php }else{?>
+          
+        <?php } ?>
       </ul>
     </div>
-    <div>
+    
+    <?php if(isset($_SESSION["correo"])) {?>
+      <div>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item dropdown position-end ">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><?php  echo seg::decodificar($_SESSION["nombre"]) ?><i class="bi bi-person-circle bg-black"></i></a>
@@ -32,5 +38,8 @@
         </li>
       </ul>
     </div>
+    <?php }else{?>
+          <a class="nav-link text-secondary" href="<?php echo "index.php?c=".seg::codificar("login")."&m=".seg::codificar("login") ?>">Login</a>
+    <?php } ?>
   </div>
 </nav>

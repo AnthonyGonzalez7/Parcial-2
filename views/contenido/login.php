@@ -44,6 +44,7 @@
                 <input class="form-check-input" type="checkbox" value="1" name="ck_check" id="form2Example34" checked />
                 <label class="form-check-label" for="form2Example34"> Remember me </label>
             </div>
+            <input type="hidden" value="<?php echo seg::getToken() ?>" name="token"/>
             <input type="submit" id="submit" value="Submit">
         </div>
         </form>

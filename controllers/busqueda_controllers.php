@@ -20,7 +20,7 @@
                     exit();
                 }
                 $buscar_id= filter_var($_POST["txtBuscar"], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-                $obj = new productos_models($buscar_id,"","","","","","","","","","","","","","");
+                $obj = new productos_models("","","","","","","",$buscar_id,"","","","","","","");
                 $buscar = $obj->valida_productos();
                 if(count($buscar)>0){
                     $mostrar = $buscar["id_producto"];   
