@@ -1,3 +1,4 @@
+<?php if (session_status()==1)session_start();?>
 <!doctype html>
 <html lang="en">
 <head>

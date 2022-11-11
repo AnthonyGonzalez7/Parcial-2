@@ -41,8 +41,8 @@
                         <h4>Aceleración: <?php echo $autos->getAceleration()?></h4>
                         <br />
                         <h4>Descripcion: </h4>
-                        <div class="text-justify ...">
-                        <h4><?php echo $autos->getdescripcion()?></h4>
+                        <div class="d-flex justify-content-evenly">
+                        <div class="p-2"><h4><?php echo $autos->getdescripcion()?></h4></div>
                         </div>
                         <br />
 

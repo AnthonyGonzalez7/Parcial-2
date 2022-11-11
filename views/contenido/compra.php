@@ -80,8 +80,8 @@ foreach(automoviles_controllers::Mostrar() as $autos){
 
     <p class="client">
       <strong>Facturar a</strong><br>
-      <?php  echo seg::decodificar($_SESSION["nombre"]) ?><br>
-      <?php  echo seg::decodificar($_SESSION["correo"]) ?><br>
+      <?php  echo $_SESSION["nombre"] ?><br>
+      <?php  echo $_SESSION["correo"] ?><br>
 	  Panamá, Panamá<br>
 	  255-7878 
     </p>
@@ -93,8 +93,8 @@ foreach(automoviles_controllers::Mostrar() as $autos){
 
     <p class="client">
       <strong>Enviar a</strong><br>
-      <?php  echo seg::decodificar($_SESSION["nombre"]) ?><br>
-      <?php  echo seg::decodificar($_SESSION["correo"]) ?><br>
+      <?php  echo $_SESSION["nombre"] ?><br>
+      <?php  echo $_SESSION["correo"] ?><br>
 	  Panamá, Panamá<br>
 	  255-7878 
     </p>

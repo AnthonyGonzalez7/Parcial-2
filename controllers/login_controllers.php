@@ -25,9 +25,9 @@ require_once("models/users_models.php");
                 echo "Acceso restringido";
                 exit();
             }
-            $usuario= filter_var($_POST["txtCorreo_Usuario"], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-            $Contra= filter_var($_POST["txtContraseña_Usuario"], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-            $obj = new users_models($_POST["txtcorreo"],$_POST["txtpassword"],"","");
+            $usuario= filter_var($_POST["txtcorreo"], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+            $password= filter_var($_POST["txtpassword"], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+            $obj = new users_models($usuario,$password,"","");
             $resultado = $obj->validacion_usuario();
             if(count($resultado)>0){
                 $_SESSION["correo"] = $resultado["correo"];
@@ -44,7 +44,8 @@ require_once("models/users_models.php");
 
         public static function cerrar_sesion(){
             session_destroy();
-            setcookie("correo",$resultado2["correo"],time()-60);
+            setcookie("correo","",time()-60);
+            setcookie("nombre","",time()-60);
             header("location:index.php");
         }
 

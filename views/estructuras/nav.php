@@ -29,11 +29,11 @@
       <div>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item dropdown position-end ">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><?php  echo seg::decodificar($_SESSION["nombre"]) ?><i class="bi bi-person-circle bg-black"></i></a>
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><?php echo $_SESSION["nombre"] ?> <i class="bi bi-person-circle bg-black"></i></a>
           <ul class="dropdown-menu dropdown-menu dropdown-menu-lg-end">
-            <li><span class="dropdown-item-text disabled"><?php  echo seg::decodificar($_SESSION["correo"]) ?></span></li>
+            <li><span class="dropdown-item-text disabled"><?php  echo $_SESSION["correo"] ?></span></li>
             <hr>
-            <li><a class="dropdown-item" href="<?php echo "index.php?c=".seg::codificar("login")."&m=".seg::codificar("cerrar_sesion") ?>" id="cerrar_sesionvar" value="1" name="cerrar_sesionvar">Cerrar Sesión</a></li>
+            <li><a class="dropdown-item" href="<?php echo "index.php?c=".seg::codificar("login")."&m=".seg::codificar("cerrar_sesion") ?>">Cerrar Sesión</a></li>
           </ul>
         </li>
       </ul>

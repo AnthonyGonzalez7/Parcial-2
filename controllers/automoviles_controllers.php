@@ -1,8 +1,5 @@
 <?php
-
     require_once("models\productos_models.php");
-
-
     class automoviles_controllers{
         
         
